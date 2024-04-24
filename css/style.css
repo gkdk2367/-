@@ -1,0 +1,111 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Turret+Road:wght@200;300;400;500;700;800&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: antiquewhite;
+}
+
+nav {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  margin-top: -25px;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+nav article {
+  width: 200px;
+  height: 100%;
+  text-align: center;
+  position: relative;
+}
+nav article > a {
+  font: 12px/50px "Turret Road";
+  color: #aaa;
+  transition: all 0.5s;
+  letter-spacing: 1px;
+}
+nav article div {
+  width: 100%;
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: -100px;
+  left: 0;
+  opacity: 0;
+  transform: scale(0) rotateY(360deg);
+  transition: all 0.5s;
+  padding: 10px;
+  /*
+  질문) 어떤상황에서 p,span, div를 사용하는가?
+  => 정답 : 회사내규에 따라다름.
+  => 지금? 상황에 따라서 문자를 사용한다 span이나 p태그를 사용
+  그러나 span인라인, p는 블록입니다. 따라서 블록요소가 필요하면 p를 써야겠죠
+  블록요소를 사용해야한다면? div가 만만하지만 p를 써도 괜찮...
+
+  */
+}
+nav article div p {
+  width: 100%;
+  height: 90px;
+}
+nav article div p img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+nav article div h2 {
+  height: 50px;
+  font: bold 12px/50px "Turret Road";
+  color: #fff;
+  letter-spacing: 1px;
+}
+nav article div ul {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-evenly;
+}
+nav article div ul li {
+  width: 100%;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav article div ul li a {
+  font: 12px/1 "Turret Road";
+  color: #000;
+  letter-spacing: 1px;
+}
+nav article div ul li a:hover {
+  color: orange;
+}
+nav article:hover > a {
+  margin-left: -100px;
+  opacity: 0;
+}
+nav article:hover div {
+  opacity: 1;
+  transform: scale(1) rotateY(0deg);
+}
+
+/*# sourceMappingURL=style.css.map */
